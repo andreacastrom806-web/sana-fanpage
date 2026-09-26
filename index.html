@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sana ♡ TWICE Fanpage</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff5fa;
+  color: #4b3040;
+}
+
+/* INICIO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, #ffffff 0 5%, transparent 6%),
+    radial-gradient(circle at 80% 30%, #ffffff 0 4%, transparent 5%),
+    linear-gradient(135deg, #ffd6e8, #f8b9d5, #e9a9ca);
+}
+
+.hero::before {
+  content: "♡  ✦  ♡  ✧  ♡  ✦  ♡";
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  font-size: 30px;
+  color: white;
+  opacity: .7;
+}
+
+.hero-box {
+  max-width: 750px;
+  padding: 45px 30px;
+  border-radius: 30px;
+  background: rgba(255,255,255,.72);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 15px 40px rgba(120,60,90,.2);
+}
+
+.hero h1 {
+  font-size: clamp(45px, 9vw, 90px);
+  color: #d95c91;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.hero h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.continue-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #d95c91;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.continue-btn:hover {
+  transform: scale(1.07);
+  background: #bd4377;
+}
+
+/* SECCIONES */
+section {
+  padding: 70px 7%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  color: #cf568b;
+  margin-bottom: 35px;
+}
+
+/* SOBRE SANA */
+.about {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  background: white;
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(100,50,80,.1);
+}
+
+.about p {
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/* DATOS */
+.info-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.info-card {
+  background: white;
+  padding: 25px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 7px 20px rgba(100,50,80,.1);
+  transition: .3s;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+}
+
+.info-card span {
+  font-size: 30px;
+}
+
+.info-card h3 {
+  margin: 10px 0 7px;
+  color: #d95c91;
+}
+
+/* GALERÍA */
+.gallery {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.photo {
+  height: 280px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 0 2px 8px #8b4264;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.photo:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.photo:nth-child(1) {
+  background: linear-gradient(145deg, #e88ab4, #f7c9dd);
+}
+
+.photo:nth-child(2) {
+  background: linear-gradient(145deg, #d36b9c, #f2b4cf);
+}
+
+.photo:nth-child(3) {
+  background: linear-gradient(145deg, #f0a6c5, #d96598);
+}
+
+.photo:nth-child(4) {
+  background: linear-gradient(145deg, #c75b8e, #f3b9d2);
+}
+
+.photo::after {
+  content: "SANA ♡";
+}
+
+/* INSTAGRAM */
+.instagram {
+  text-align: center;
+  background: linear-gradient(135deg, #ffe4ef, #f9c3db);
+}
+
+.ig-box {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 28px;
+  box-shadow: 0 10px 30px rgba(100,50,80,.15);
+}
+
+.ig-box h3 {
+  font-size: 28px;
+  color: #d95c91;
+  margin-bottom: 10px;
+}
+
+.ig-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 27px;
+  border-radius: 25px;
+  text-decoration: none;
+  background: #d95c91;
+  color: white;
+  font-weight: bold;
+}
+
+/* JUEGOS */
+.games {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.game {
+  background: white;
+  padding: 25px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 7px 20px rgba(100,50,80,.1);
+}
+
+.game h3 {
+  color: #d95c91;
+  margin-bottom: 15px;
+}
+
+.game button {
+  border: none;
+  padding: 11px 18px;
+  border-radius: 20px;
+  background: #ed8fba;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.game button:hover {
+  background: #cf568b;
+}
+
+.result {
+  margin-top: 12px;
+  min-height: 25px;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #d95c91;
+  color: white;
+}
+
+footer p {
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 55px 5%;
+  }
+
+  .hero-box {
+    padding: 35px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- INICIO -->
+<header class="hero">
+  <div class="hero-box">
+    <h1>SANA ♡</h1>
+    <h2>TWICE • ONCE • Fanpage</h2>
+    <p>
+      Bienvenid@ a un pequeño rincón dedicado a
+      Minatozaki Sana, integrante de TWICE. 🌷
+    </p>
+
+    <a href="#inicio" class="continue-btn">
+      CONTINUAR ♡
+    </a>
+  </div>
+</header>
+
+<!-- SOBRE SANA -->
+<section id="inicio">
+  <h2 class="section-title">♡ Sobre Sana ♡</h2>
+
+  <div class="about">
+    <p>
+      Sana Minatozaki es una integrante del grupo femenino TWICE.
+      Nació en Osaka, Japón, y debutó junto a TWICE en 2015.
+      Es conocida por su personalidad alegre, su carisma y su
+      participación en numerosas canciones y presentaciones del grupo.
+    </p>
+  </div>
+</section>
+
+<!-- DATOS -->
+<section>
+  <h2 class="section-title">✦ Datos de Sana ✦</h2>
+
+  <div class="info-grid">
+
+    <div class="info-card">
+      <span>🌷</span>
+      <h3>Nombre</h3>
+      <p>Minatozaki Sana</p>
+    </div>
+
+    <div class="info-card">
+      <span>🇯🇵</span>
+      <h3>Nacionalidad</h3>
+      <p>Japonesa</p>
+    </div>
+
+    <div class="info-card">
+      <span>🎂</span>
+      <h3>Nacimiento</h3>
+      <p>29 de diciembre de 1996</p>
+    </div>
+
+    <div class="info-card">
+      <span>🎤</span>
+      <h3>Grupo</h3>
+      <p>TWICE</p>
+    </div>
+
+    <div class="info-card">
+      <span>💗</span>
+      <h3>Posición</h3>
+      <p>Vocalista</p>
+    </div>
+
+    <div class="info-card">
+      <span>✨</span>
+      <h3>Debut</h3>
+      <p>2015</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section>
+  <h2 class="section-title">📸 Galería de Sana</h2>
+
+  <div class="gallery">
+    <div class="photo"></div>
+    <div class="photo"></div>
+    <div class="photo"></div>
+    <div class="photo"></div>
+  </div>
+
+  <p style="text-align:center; margin-top:20px;">
+    ✨ Puedes reemplazar estos cuadros por tus propias fotos de Sana.
+  </p>
+</section>
+
+<!-- INSTAGRAM -->
+<section class="instagram">
+  <h2 class="section-title">📱 Instagram</h2>
+
+  <div class="ig-box">
+    <h3>@m.by__sana</h3>
+
+    <p>
+      Visita la cuenta de Instagram de Sana y descubre
+      sus publicaciones y actualizaciones.
+    </p>
+
+    <a
+      class="ig-btn"
+      href="https://www.instagram.com/m.by__sana/"
+      target="_blank"
+      rel="noopener noreferrer">
+      VISITAR INSTAGRAM ♡
+    </a>
+  </div>
+</section>
+
+<!-- JUEGOS -->
+<section>
+  <h2 class="section-title">🎀 Mini juegos de Sana</h2>
+
+  <div class="games">
+
+    <!-- JUEGO 1 -->
+    <div class="game">
+      <h3>💗 ¿Cuánto conoces a Sana?</h3>
+
+      <p>¿En qué grupo debutó Sana?</p>
+
+      <button onclick="quiz('TWICE')">TWICE</button>
+      <button onclick="quiz('BLACKPINK')">BLACKPINK</button>
+
+      <div id="quizResult" class="result"></div>
+    </div>
+
+    <!-- JUEGO 2 -->
+    <div class="game">
+      <h3>🌸 Elige un corazón</h3>
+
+      <p>Elige uno:</p>
+
+      <button onclick="heart(1)">♡</button>
+      <button onclick="heart(2)">♡</button>
+      <button onclick="heart(3)">♡</button>
+
+      <div id="heartResult" class="result"></div>
+    </div>
+
+    <!-- JUEGO 3 -->
+    <div class="game">
+      <h3>🐰 Sana dice...</h3>
+
+      <p>Presiona el botón para recibir un mensaje.</p>
+
+      <button onclick="sanaMessage()">SANA ♡</button>
+
+      <div id="message" class="result"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>♡ Página fan dedicada a Sana de TWICE ♡</p>
+  <p>Hecha con mucho cariño para ONCE 🌷</p>
+  <p>Fanpage: @twisana_12 • @twiihyo_2</p>
+</footer>
+
+<script>
+
+function quiz(answer) {
+  const result = document.getElementById("quizResult");
+
+  if (answer === "TWICE") {
+    result.textContent = "¡Correcto! 🎉💗";
+  } else {
+    result.textContent = "Casi... intenta otra vez 🌷";
+  }
+}
+
+function heart(number) {
+  const result = document.getElementById("heartResult");
+
+  const messages = [
+    "¡Elegiste un corazón lleno de amor! 💗",
+    "¡Sana te manda un corazón! 🩷",
+    "¡ONCE y Sana para siempre! 🌸"
+  ];
+
+  result.textContent = messages[number - 1];
+}
+
+function sanaMessage() {
+  const messages = [
+    "Sana ♡",
+    "¡Fighting! 🌷",
+    "ONCE siempre contigo 💗",
+    "Have a nice day ✨",
+    "Sana love! 🐰💕"
+  ];
+
+  const random = Math.floor(Math.random() * messages.length);
+
+  document.getElementById("message").textContent = messages[random];
+}
+
+</script>
+
+</body>
+</html>
